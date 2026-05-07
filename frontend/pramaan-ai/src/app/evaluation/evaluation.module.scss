@@ -1,0 +1,25 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  padding: 24px 40px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.matrixArea {
+  overflow: auto;
+}
+
+.aiArea {
+  overflow: auto;
+}

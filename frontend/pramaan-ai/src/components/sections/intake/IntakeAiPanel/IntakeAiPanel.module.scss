@@ -1,0 +1,171 @@
+
+.panel {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelTitle {
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  border-bottom: 1px solid $color-border;
+  background: $color-purple-bg;
+  letter-spacing: 0.01em;
+}
+
+.idle {
+  padding: 24px 14px;
+  font-size: 12px;
+  color: $color-text-muted;
+  text-align: center;
+}
+
+.section {
+  padding: 12px 14px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.count {
+  background: $color-purple;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0 6px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.label { color: $color-text-secondary; }
+.value { font-weight: 500; color: $color-text-primary; }
+
+.confBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+
+  &.high { background: $color-green-bg; color: $color-green; }
+  &.medium { background: $color-amber-bg; color: $color-amber; }
+  &.low { background: $color-red-bg; color: $color-red; }
+}
+
+.criteriaList { display: flex; flex-direction: column; gap: 6px; }
+
+.criterionItem {
+  background: #fafafa;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 7px 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.criterionTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.criterionText { font-size: 12px; color: $color-text-primary; line-height: 1.4; }
+
+.criterionMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.typeTag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  &.financial { background: $color-blue-bg; color: $color-blue; }
+  &.technical { background: $color-purple-bg; color: $color-purple; }
+  &.compliance { background: $color-amber-bg; color: $color-amber; }
+}
+
+.confSmall {
+  font-size: 10px;
+  font-weight: 600;
+
+  &.high { color: $color-green; }
+  &.medium { color: $color-amber; }
+  &.low { color: $color-red; }
+}
+
+.mandatoryDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $color-red;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.mandatoryItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: $color-text-primary;
+  padding: 2px 0;
+}
+
+.readinessRow {
+  font-size: 12px;
+  color: $color-text-secondary;
+  padding: 2px 0;
+
+  strong { color: $color-text-primary; }
+}
+
+.recommendation {
+  padding: 12px 14px;
+  background: $color-blue-bg;
+  border-top: 1px solid $color-blue-border;
+}
+
+.recTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.recText {
+  font-size: 12px;
+  color: $color-text-primary;
+  line-height: 1.5;
+}

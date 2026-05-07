@@ -1,0 +1,135 @@
+
+.container {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.tableHeader {
+  padding: 12px 16px;
+  border-bottom: 1px solid $color-border;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-text-primary;
+}
+
+.tableWrap { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+
+  th {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: $color-text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #fafafa;
+    border-bottom: 1px solid $color-border;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid $color-border;
+    color: $color-text-primary;
+  }
+}
+
+.row {
+  cursor: pointer;
+  transition: background 0.1s;
+
+  &:hover td { background: $color-blue-bg; }
+  &:last-child td { border-bottom: none; }
+}
+
+.bidderName { font-weight: 500; }
+
+.none { color: $color-text-muted; }
+
+.missingCount {
+  color: $color-red;
+  font-weight: 500;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &.validated { background: $color-green-bg; color: $color-green; }
+  &.incomplete { background: $color-red-bg; color: $color-red; }
+  &.needs-review { background: $color-amber-bg; color: $color-amber; }
+}
+
+.confidence {
+  font-weight: 600;
+  font-size: 12px;
+
+  &.high { color: $color-green; }
+  &.medium { color: $color-amber; }
+  &.low { color: $color-red; }
+}
+
+// Side panel
+.panel {
+  border-top: 1px solid $color-border;
+  background: #fafafa;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid $color-border;
+
+  button {
+    background: none;
+    border: none;
+    color: $color-text-muted;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover { color: $color-red; }
+  }
+}
+
+.panelBody { padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
+
+.section { display: flex; flex-direction: column; gap: 6px; }
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.missingItem {
+  font-size: 12px;
+  color: $color-red;
+  padding: 3px 0;
+}
+
+.confRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: $color-text-secondary;
+}

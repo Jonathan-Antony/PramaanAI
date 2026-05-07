@@ -1,0 +1,95 @@
+@use '@/styles/abstracts/variables' as *;
+
+.panel {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  position: sticky;
+  top: 24px;
+}
+
+.panelTitle {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  border-bottom: 1px solid $color-border;
+  background: #fafafa;
+}
+
+.section {
+  padding: 14px 16px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &:last-child { border-bottom: none; }
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flagCount {
+  background: $color-red;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  span { color: $color-text-muted; }
+  strong { color: $color-text-primary; font-weight: 500; }
+}
+
+.snapRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: $color-text-secondary;
+}
+
+.snap {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  &.pass { background: $color-green-bg; color: $color-green; }
+  &.fail { background: $color-red-bg; color: $color-red; }
+  &.review { background: $color-amber-bg; color: $color-amber; }
+}
+
+.flag {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: $color-text-secondary;
+  padding: 6px 8px;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: background 0.1s;
+  line-height: 1.4;
+
+  &:hover { background: $color-bg; }
+  &.warn .flagIcon { color: $color-amber; }
+  &.error .flagIcon { color: $color-red; }
+}
+
+.flagIcon { flex-shrink: 0; }

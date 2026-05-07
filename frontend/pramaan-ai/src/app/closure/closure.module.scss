@@ -1,0 +1,79 @@
+@use '@/styles/abstracts/variables' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $color-bg;
+}
+
+.contextHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 40px 20px;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerLeft { display: flex; flex-direction: column; gap: 6px; }
+
+.tenderName {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-text-primary;
+  margin: 0;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: $color-text-secondary;
+  strong { color: $color-text-primary; }
+}
+
+.sep { color: $color-text-muted; }
+
+.statusPill {
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.readyPill { background: $color-green-bg; color: $color-green; }
+.pendingPill { background: $color-amber-bg; color: $color-amber; }
+.certifiedPill { background: $color-blue-bg; color: $color-blue; }
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.metaItem {
+  font-size: 13px;
+  color: $color-text-secondary;
+  strong { color: $color-text-primary; }
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  padding: 24px 40px;
+  align-items: start;
+}
+
+.main { display: flex; flex-direction: column; gap: 20px; }
+
+.tables { display: flex; flex-direction: column; gap: 20px; }
+
+.certArea {}
+
+.aside {}

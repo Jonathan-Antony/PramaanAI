@@ -1,0 +1,40 @@
+@use '@/styles/abstracts/variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  
+  &.success {
+    color: $color-green;
+    background: $color-green-bg;
+    border: 1px solid $color-green-border;
+  }
+  
+  &.error {
+    color: $color-red;
+    background: $color-red-bg;
+    border: 1px solid $color-red-border;
+  }
+  
+  &.warning {
+    color: $color-amber;
+    background: $color-amber-bg;
+    border: 1px solid $color-amber-border;
+  }
+  
+  &.info {
+    color: $color-blue;
+    background: $color-blue-bg;
+    border: 1px solid $color-blue-border;
+  }
+  
+  &.neutral {
+    color: $color-text-secondary;
+    background: $color-bg;
+    border: 1px solid $color-border;
+  }
+}

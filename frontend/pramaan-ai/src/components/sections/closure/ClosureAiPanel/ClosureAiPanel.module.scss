@@ -1,0 +1,68 @@
+@use '@/styles/abstracts/variables' as *;
+
+.panel {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-border;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border;
+  &:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: $color-text-secondary;
+  margin-bottom: 6px;
+  strong { color: $color-text-primary; }
+}
+
+.green { color: $color-green; }
+.red { color: $color-red; }
+.amber { color: $color-amber; }
+
+.readiness {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: $radius-md;
+  &.ready { background: $color-green-bg; color: $color-green; }
+  &.blocked { background: $color-amber-bg; color: $color-amber; }
+}
+
+.integrityRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: $color-text-secondary;
+  margin-bottom: 6px;
+}
+
+.check { color: $color-green; font-weight: 700; }

@@ -1,0 +1,64 @@
+@use '@/styles/abstracts/variables' as *;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px 40px 0;
+}
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+
+  &:hover { box-shadow: $shadow-md; }
+}
+
+.readyCard { border-color: $color-green-border; background: $color-green-bg; }
+.blockedCard { border-color: $color-amber-border; background: $color-amber-bg; }
+
+.cardValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: $color-text-primary;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cardLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-text-secondary;
+  margin-bottom: 4px;
+}
+
+.cardSub {
+  font-size: 12px;
+  color: $color-text-muted;
+}
+
+.distRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+
+  span {
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.eligible { color: $color-green; }
+.notEligible { color: $color-red; }
+.review { color: $color-amber; }
+
+.readinessStatus { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.readyText { color: $color-green; }
+.blockedText { color: $color-amber; }

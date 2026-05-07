@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+// Typography
+body {
+  font-family: $font-sans;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $color-text-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: $font-mono;
+}

@@ -1,0 +1,325 @@
+
+.wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableContainer {
+  overflow: auto;
+  flex: 1;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 100%;
+}
+
+.th {
+  padding: 10px 12px;
+  background: #fafafa;
+  border-bottom: 2px solid $color-border;
+  border-right: 1px solid $color-border;
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-text-secondary;
+  text-align: left;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.criteriaCol {
+  min-width: 200px;
+  max-width: 220px;
+}
+
+.bidderTh {
+  min-width: 130px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.stickyCol {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background: #fafafa;
+  border-right: 2px solid $color-border;
+}
+
+.bidderName {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-text-primary;
+  text-decoration: none;
+  margin-bottom: 4px;
+
+  &:hover { color: $color-blue; text-decoration: underline; }
+}
+
+.bidderBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 20px;
+
+  &.eligible { background: $color-green-bg; color: $color-green; }
+  &.not-eligible { background: $color-red-bg; color: $color-red; }
+  &.review { background: $color-amber-bg; color: $color-amber; }
+  &.missing { background: #f3f4f6; color: $color-text-muted; }
+  &.failed { background: $color-red-bg; color: $color-red; }
+}
+
+.bidderMeta {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.failedCount {
+  font-size: 10px;
+  color: $color-red;
+  background: $color-red-bg;
+  padding: 1px 5px;
+  border-radius: 20px;
+}
+
+.flagCount {
+  font-size: 10px;
+  color: $color-amber;
+  background: $color-amber-bg;
+  padding: 1px 5px;
+  border-radius: 20px;
+}
+
+// Group row
+.groupRow { background: #f8f9fb; }
+
+.groupCell {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid $color-border;
+  user-select: none;
+
+  &:hover { background: #f1f5f9; }
+}
+
+.groupToggle { font-size: 11px; color: $color-text-muted; }
+
+.groupLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 20px;
+
+  &.financial { background: $color-blue-bg; color: $color-blue; }
+  &.technical { background: $color-purple-bg; color: $color-purple; }
+  &.compliance { background: $color-amber-bg; color: $color-amber; }
+}
+
+.groupCount { font-size: 11px; color: $color-text-muted; }
+
+// Criterion row
+.criterionRow {
+  &.dimmed { opacity: 0.35; }
+}
+
+.td {
+  padding: 8px 10px;
+  border-bottom: 1px solid $color-border;
+  border-right: 1px solid $color-border;
+  vertical-align: middle;
+}
+
+.criterionCell {
+  background: $color-surface;
+  min-width: 200px;
+}
+
+.criterionName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: $color-text-primary;
+  font-size: 12px;
+}
+
+.expandRowBtn {
+  background: none;
+  border: none;
+  color: $color-text-muted;
+  font-size: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.threshold {
+  font-size: 11px;
+  color: $color-text-muted;
+  margin-top: 2px;
+  margin-left: 16px;
+}
+
+// Cell states
+.cell {
+  text-align: center;
+  cursor: pointer;
+  transition: filter 0.1s;
+
+  &:hover { filter: brightness(0.95); }
+
+  &.eligible { background: $color-green-bg; }
+  &.not-eligible { background: $color-red-bg; }
+  &.review { background: $color-amber-bg; }
+  &.missing { background: #f3f4f6; }
+  &.failed { background: $color-red-bg; }
+}
+
+.cellIcon {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+
+  .eligible & { color: $color-green; }
+  .not-eligible & { color: $color-red; }
+  .review & { color: $color-amber; }
+  .missing & { color: $color-text-muted; }
+  .failed & { color: $color-red; }
+}
+
+.cellValue {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  color: $color-text-primary;
+  margin-top: 2px;
+}
+
+.cellReason {
+  display: block;
+  font-size: 10px;
+  color: $color-text-secondary;
+  margin-top: 2px;
+}
+
+// Expanded row
+.expandedRow { background: #fafafa; }
+
+.expandedCell {
+  padding: 8px 12px 8px 28px;
+  border-bottom: 1px solid $color-border;
+}
+
+.expandedContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.expandedLabel { font-weight: 600; color: $color-text-secondary; }
+
+.typeTag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 20px;
+
+  &.financial { background: $color-blue-bg; color: $color-blue; }
+  &.technical { background: $color-purple-bg; color: $color-purple; }
+  &.compliance { background: $color-amber-bg; color: $color-amber; }
+}
+
+// Tooltip
+.tooltip {
+  position: fixed;
+  background: #1e2433;
+  color: #e2e8f0;
+  padding: 8px 12px;
+  border-radius: $radius-sm;
+  font-size: 11px;
+  line-height: 1.6;
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 220px;
+  box-shadow: $shadow-md;
+}
+
+// Detail panel
+.detailPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: $color-surface;
+  border-left: 1px solid $color-border;
+  box-shadow: $shadow-md;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid $color-border;
+  font-size: 13px;
+  font-weight: 600;
+
+  button {
+    background: none;
+    border: none;
+    color: $color-text-muted;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover { color: $color-red; }
+  }
+}
+
+.detailBody {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  span:first-child { color: $color-text-secondary; }
+  strong { color: $color-text-primary; }
+}
+
+.investigateLink {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: $color-blue;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover { text-decoration: underline; }
+}

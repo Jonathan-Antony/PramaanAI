@@ -1,0 +1,46 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  flex-shrink: 0;
+}
+
+.tenderName {
+  font-size: 17px;
+  font-weight: 700;
+  color: $color-text-primary;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: $color-text-secondary;
+  margin-top: 4px;
+
+  strong { color: $color-text-primary; }
+}
+
+.sep { color: $color-text-muted; }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+
+  &.eligible { background: $color-green-bg; color: $color-green; border: 1px solid $color-green-border; }
+  &.notEligible { background: $color-red-bg; color: $color-red; border: 1px solid $color-red-border; }
+  &.review { background: $color-amber-bg; color: $color-amber; border: 1px solid $color-amber-border; }
+}

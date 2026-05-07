@@ -1,0 +1,122 @@
+@use '@/styles/abstracts/variables' as *;
+
+.viewer {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  border-bottom: 1px solid $color-border;
+  background: #fafafa;
+}
+
+.docSelector {
+  padding: 10px 14px;
+  border-bottom: 1px solid $color-border;
+}
+
+.select {
+  width: 100%;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 7px 10px;
+  font-size: 13px;
+  background: $color-surface;
+  outline: none;
+  &:focus { border-color: $color-blue; }
+}
+
+.docArea {
+  background: $color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.docPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.docIcon { font-size: 36px; }
+
+.docName {
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-text-primary;
+  text-align: center;
+  word-break: break-all;
+}
+
+.highlightBox {
+  width: 100%;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.highlightLine { height: 8px; background: $color-border; border-radius: 2px; width: 100%; }
+
+.highlightActive {
+  height: 10px;
+  background: rgba(#d97706, 0.3);
+  border: 1px solid $color-amber;
+  border-radius: 2px;
+  width: 90%;
+}
+
+.pageNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: $color-text-secondary;
+
+  button {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover { background: $color-blue-bg; border-color: $color-blue; }
+  }
+}
+
+.empty { font-size: 13px; color: $color-text-muted; }
+
+.meta {
+  padding: 12px 14px;
+  border-top: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #fafafa;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  span { color: $color-text-muted; }
+  strong { color: $color-text-primary; font-weight: 500; }
+}
+
+.amber { color: $color-amber !important; }

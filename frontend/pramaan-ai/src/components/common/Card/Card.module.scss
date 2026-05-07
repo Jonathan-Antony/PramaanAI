@@ -1,0 +1,47 @@
+@use '@/styles/abstracts/variables' as *;
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 24px;
+  box-shadow: $shadow-sm;
+  transition: box-shadow 0.2s;
+  
+  &.hoverable:hover {
+    box-shadow: $shadow-md;
+  }
+  
+  &.compact {
+    padding: 16px;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-text-primary;
+    margin: 0;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.cardBody {
+  color: $color-text-primary;
+}
+
+.cardFooter {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $color-border;
+}

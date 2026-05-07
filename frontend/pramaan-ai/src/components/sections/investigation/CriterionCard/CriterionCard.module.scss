@@ -1,0 +1,219 @@
+@use '@/styles/abstracts/variables' as *;
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border-left: 3px solid $color-border;
+  box-shadow: $shadow-sm;
+
+  &.eligible { border-left-color: $color-green; }
+  &.not-eligible { border-left-color: $color-red; }
+  &.needs-review { border-left-color: $color-amber; }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid $color-border;
+  background: #fafafa;
+  gap: 12px;
+}
+
+.headerLeft { display: flex; flex-direction: column; gap: 4px; }
+
+.name { font-size: 14px; font-weight: 700; color: $color-text-primary; }
+
+.req {
+  font-size: 12px;
+  color: $color-text-secondary;
+  font-family: $font-mono;
+  background: $color-bg;
+  padding: 2px 8px;
+  border-radius: $radius-sm;
+  width: fit-content;
+}
+
+.headerRight { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.statusBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  &.eligible { background: $color-green-bg; color: $color-green; }
+  &.not-eligible { background: $color-red-bg; color: $color-red; }
+  &.needs-review { background: $color-amber-bg; color: $color-amber; }
+}
+
+.confBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid;
+  white-space: nowrap;
+  &.high { background: $color-green-bg; color: $color-green; border-color: $color-green-border; }
+  &.medium { background: $color-amber-bg; color: $color-amber; border-color: $color-amber-border; }
+  &.low { background: $color-red-bg; color: $color-red; border-color: $color-red-border; }
+}
+
+.row {
+  padding: 12px 16px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rowLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.evidenceVal {
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-text-primary;
+  font-family: $font-mono;
+}
+
+.sourceRow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.docName { font-size: 13px; font-weight: 500; color: $color-text-primary; }
+
+.pageTag {
+  font-size: 11px;
+  font-weight: 600;
+  background: $color-bg;
+  color: $color-text-secondary;
+  padding: 2px 7px;
+  border-radius: $radius-sm;
+  font-family: $font-mono;
+}
+
+.viewBtn {
+  background: none;
+  border: none;
+  color: $color-blue;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+  &:hover { text-decoration: underline; }
+}
+
+.trail { display: flex; flex-direction: column; }
+
+.trailStep { display: flex; align-items: flex-start; gap: 10px; }
+
+.trailDot { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+.trailNum {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $color-border;
+  color: $color-text-secondary;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trailLine { width: 1px; height: 14px; background: $color-border; margin: 2px 0; }
+
+.trailText {
+  font-size: 13px;
+  color: $color-text-secondary;
+  padding: 2px 0 12px;
+  line-height: 1.5;
+}
+
+.trailFinal { font-weight: 600; color: $color-text-primary; padding-bottom: 2px; }
+
+.confBars { display: flex; flex-direction: column; gap: 6px; }
+
+.confBarRow { display: flex; align-items: center; gap: 10px; }
+
+.confBarLabel { font-size: 12px; color: $color-text-secondary; width: 72px; flex-shrink: 0; }
+
+.confBarTrack {
+  flex: 1;
+  height: 6px;
+  background: $color-border;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.confBarFill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+
+.confBarVal { font-size: 12px; font-weight: 700; width: 36px; text-align: right; flex-shrink: 0; }
+
+.actionPanel {
+  padding: 14px 16px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overrideSelect {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 8px 12px;
+  font-size: 13px;
+  background: $color-surface;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+
+  &:focus { border-color: $color-blue; }
+  &.eligible { border-color: $color-green; color: $color-green; }
+  &.not-eligible { border-color: $color-red; color: $color-red; }
+  &.needs-review { border-color: $color-amber; color: $color-amber; }
+}
+
+.overrideFields { display: flex; flex-direction: column; gap: 8px; }
+
+.textarea {
+  border: 1px solid $color-amber-border;
+  border-radius: $radius-md;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  width: 100%;
+  background: $color-surface;
+  box-sizing: border-box;
+  &:focus { border-color: $color-blue; }
+  &.optional { border-color: $color-border; }
+}
+
+.saveBtn {
+  background: $color-blue;
+  color: #fff;
+  border: none;
+  border-radius: $radius-md;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) { background: #1d4ed8; }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.savedBtn { background: $color-green !important; }

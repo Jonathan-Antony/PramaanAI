@@ -1,0 +1,76 @@
+@use 'sass:color';
+@use '@/styles/abstracts/variables' as *;
+
+.button {
+  padding: 10px 20px;
+  border-radius: $radius-md;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  &.primary {
+    background: $color-blue;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background: color.adjust($color-blue, $lightness: -10%);
+    }
+  }
+  
+  &.secondary {
+    background: $color-surface;
+    color: $color-text-primary;
+    border: 1px solid $color-border;
+    
+    &:hover:not(:disabled) {
+      background: $color-bg;
+    }
+  }
+  
+  &.success {
+    background: $color-green;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background: color.adjust($color-green, $lightness: -10%);
+    }
+  }
+  
+  &.danger {
+    background: $color-red;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background: color.adjust($color-red, $lightness: -10%);
+    }
+  }
+  
+  &.ghost {
+    background: transparent;
+    color: $color-text-primary;
+    
+    &:hover:not(:disabled) {
+      background: $color-bg;
+    }
+  }
+  
+  &.small {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  &.large {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}

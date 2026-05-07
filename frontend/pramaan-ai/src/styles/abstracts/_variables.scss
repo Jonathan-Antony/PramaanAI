@@ -1,0 +1,43 @@
+// Variables-only partial — safe to @use in CSS Modules
+$color-bg: #f8f9fb;
+$color-surface: #ffffff;
+$color-border: #e5e7eb;
+$color-text-primary: #111827;
+$color-text-secondary: #6b7280;
+$color-text-muted: #9ca3af;
+
+$color-green-bg: #f0fdf4;
+$color-green: #16a34a;
+$color-green-border: #bbf7d0;
+
+$color-red-bg: #fef2f2;
+$color-red: #dc2626;
+$color-red-border: #fecaca;
+
+$color-amber-bg: #fffbeb;
+$color-amber: #d97706;
+$color-amber-border: #fde68a;
+
+$color-blue: #2563eb;
+$color-blue-bg: #eff6ff;
+$color-blue-border: #bfdbfe;
+
+$color-primary: #2563eb;
+
+$color-purple: #7c3aed;
+$color-purple-bg: #f5f3ff;
+
+$color-sidebar-bg: #1e2433;
+$color-sidebar-text: #cbd5e1;
+$color-sidebar-active: #ffffff;
+$color-sidebar-active-bg: #2d3748;
+
+$font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+$font-mono: var(--font-geist-mono), monospace;
+
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+$shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+$shadow-md: 0 4px 12px rgba(0,0,0,0.1);

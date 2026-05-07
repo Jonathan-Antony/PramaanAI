@@ -1,0 +1,128 @@
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  border-left: 1px solid $color-border;
+  background: $color-surface;
+}
+
+.panelTitle {
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  border-bottom: 1px solid $color-border;
+  background: $color-purple-bg;
+  flex-shrink: 0;
+}
+
+.section {
+  padding: 12px 14px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flaggedItem {
+  display: block;
+  background: #fafafa;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: background 0.1s;
+
+  &:hover { background: $color-blue-bg; border-color: $color-blue-border; }
+}
+
+.flaggedTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.flaggedName { font-size: 12px; font-weight: 600; color: $color-text-primary; }
+
+.priorityTag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 20px;
+
+  &.high { background: $color-red-bg; color: $color-red; }
+  &.medium { background: $color-amber-bg; color: $color-amber; }
+  &.low { background: $color-green-bg; color: $color-green; }
+}
+
+.flaggedReason { font-size: 11px; color: $color-text-secondary; }
+
+.priorityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rank {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $color-blue;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.priorityName { font-size: 12px; font-weight: 600; color: $color-text-primary; }
+.priorityReason { font-size: 11px; color: $color-text-secondary; margin-top: 2px; }
+
+.ambiguityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.ambiguityDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-amber;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.recommendation {
+  padding: 12px 14px;
+  background: $color-blue-bg;
+  border-top: 1px solid $color-blue-border;
+  margin-top: auto;
+}
+
+.recTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.recText { font-size: 12px; color: $color-text-primary; line-height: 1.5; }

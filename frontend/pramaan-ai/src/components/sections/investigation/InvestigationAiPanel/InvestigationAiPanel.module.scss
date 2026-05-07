@@ -1,0 +1,99 @@
+@use '@/styles/abstracts/variables' as *;
+
+.panel {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.title {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-text-primary;
+  border-bottom: 1px solid $color-border;
+  background: $color-purple-bg;
+}
+
+.section {
+  padding: 14px 16px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &:last-child { border-bottom: none; }
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: $color-text-secondary;
+  line-height: 1.5;
+  padding: 6px 8px;
+  border-radius: $radius-sm;
+  &.warn { background: $color-amber-bg; }
+}
+
+.icon { flex-shrink: 0; color: $color-amber; }
+
+.recommendation {
+  font-size: 13px;
+  color: $color-text-primary;
+  background: $color-blue-bg;
+  border: 1px solid $color-blue-border;
+  border-radius: $radius-md;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.overrideRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.overrideLabel { color: $color-text-secondary; }
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  &.review { background: $color-amber-bg; color: $color-amber; }
+  &.eligible { background: $color-green-bg; color: $color-green; }
+  &.not-eligible { background: $color-red-bg; color: $color-red; }
+}
+
+.none { font-size: 12px; color: $color-text-muted; font-style: italic; }
+
+.auditRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: $color-text-secondary;
+  line-height: 1.4;
+}
+
+.auditCount {
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-blue;
+  background: $color-blue-bg;
+  border: 1px solid $color-blue-border;
+  padding: 3px 12px;
+  border-radius: 20px;
+  width: fit-content;
+}

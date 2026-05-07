@@ -1,0 +1,143 @@
+@use "sass:color";
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 13px;
+  color: $color-text-primary;
+  flex: 1;
+}
+
+.addBtn {
+  background: $color-blue;
+  color: #fff;
+  border: none;
+  border-radius: $radius-sm;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+
+  &:hover:not(:disabled) { background: color.adjust($color-blue, $lightness: -8%); }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: $color-text-muted;
+  font-size: 12px;
+}
+
+.list { display: flex; flex-direction: column; }
+
+.bundle {
+  border-bottom: 1px solid $color-border;
+
+  &:last-child { border-bottom: none; }
+}
+
+.bundleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.expandBtn {
+  background: none;
+  border: none;
+  color: $color-text-muted;
+  font-size: 12px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.nameInput {
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: $radius-sm;
+  padding: 3px 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $color-text-primary;
+  background: transparent;
+  min-width: 0;
+
+  &:hover { border-color: $color-border; }
+  &:focus { outline: none; border-color: $color-blue; background: $color-blue-bg; }
+}
+
+.fileCount {
+  font-size: 11px;
+  color: $color-text-muted;
+  white-space: nowrap;
+}
+
+.miniProgress {
+  width: 60px;
+  height: 3px;
+  background: $color-border;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.miniProgressFill {
+  height: 100%;
+  background: $color-blue;
+  transition: width 0.1s linear;
+}
+
+.statusTag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+
+  &.uploading { background: $color-blue-bg; color: $color-blue; }
+  &.validating { background: $color-amber-bg; color: $color-amber; }
+  &.ready { background: $color-green-bg; color: $color-green; }
+  &.error { background: $color-red-bg; color: $color-red; }
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: $color-text-muted;
+  font-size: 13px;
+  padding: 2px 4px;
+  border-radius: $radius-sm;
+
+  &:hover { background: $color-red-bg; color: $color-red; }
+}
+
+.fileList {
+  padding: 6px 12px 10px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fafafa;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: $color-text-secondary;
+}

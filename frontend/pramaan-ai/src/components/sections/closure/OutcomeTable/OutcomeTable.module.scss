@@ -1,0 +1,108 @@
+@use '@/styles/abstracts/variables' as *;
+
+.wrap {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid $color-border;
+}
+
+.title { font-size: 14px; font-weight: 600; color: $color-text-primary; }
+
+.filterTag {
+  font-size: 12px;
+  background: $color-blue-bg;
+  color: $color-blue;
+  border: 1px solid $color-blue-border;
+  border-radius: 20px;
+  padding: 2px 10px;
+  button { background: none; border: none; cursor: pointer; color: $color-blue; margin-left: 4px; }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+
+  th {
+    text-align: left;
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $color-text-muted;
+    background: #fafafa;
+    border-bottom: 1px solid $color-border;
+  }
+
+  td { padding: 12px 16px; border-bottom: 1px solid $color-border; vertical-align: middle; }
+}
+
+.row { cursor: pointer; transition: background 0.15s; &:hover { background: #fafafa; } }
+.name { font-weight: 500; color: $color-text-primary; }
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+
+  &.eligible { background: $color-green-bg; color: $color-green; }
+  &.not-eligible { background: $color-red-bg; color: $color-red; }
+  &.needs-review { background: $color-amber-bg; color: $color-amber; }
+}
+
+.overrideTag {
+  font-size: 11px;
+  background: $color-purple-bg;
+  color: $color-purple;
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+.flagText { font-size: 12px; color: $color-amber; }
+
+.panel {
+  border-top: 2px solid $color-border;
+  background: #fafafa;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid $color-border;
+  button { background: none; border: none; cursor: pointer; color: $color-text-muted; font-size: 16px; }
+}
+
+.panelBody { padding: 12px 20px; display: flex; flex-direction: column; gap: 10px; }
+
+.criterionRow { display: flex; align-items: flex-start; gap: 10px; }
+
+.criterionResult {
+  font-size: 14px;
+  font-weight: 700;
+  width: 20px;
+  flex-shrink: 0;
+  &.pass { color: $color-green; }
+  &.fail { color: $color-red; }
+  &.override { color: $color-purple; }
+}
+
+.criterionName { font-size: 13px; color: $color-text-primary; }
+.criterionNote { font-size: 12px; color: $color-text-muted; margin-top: 2px; }

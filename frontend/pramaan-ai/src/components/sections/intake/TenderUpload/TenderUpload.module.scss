@@ -1,0 +1,114 @@
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 13px;
+  color: $color-text-primary;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.dropzone {
+  margin: 16px;
+  border: 2px dashed $color-border;
+  border-radius: $radius-md;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+
+  &:hover {
+    border-color: $color-blue;
+    background: $color-blue-bg;
+  }
+
+  &.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.dropIcon { font-size: 28px; }
+.dropText { font-size: 13px; font-weight: 500; color: $color-text-primary; }
+.dropHint { font-size: 11px; color: $color-text-muted; }
+
+.fileCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.fileIcon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+
+.fileInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fileName { font-size: 13px; font-weight: 500; color: $color-text-primary; word-break: break-all; }
+.fileSize { font-size: 11px; color: $color-text-muted; }
+
+.progressBar {
+  height: 4px;
+  background: $color-border;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: $color-blue;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.progressText { font-size: 11px; color: $color-text-secondary; }
+
+.statusTag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: fit-content;
+
+  &.parsing { background: $color-blue-bg; color: $color-blue; }
+  &.success { background: $color-green-bg; color: $color-green; }
+  &.warn { background: $color-amber-bg; color: $color-amber; }
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: $color-text-muted;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: $radius-sm;
+  flex-shrink: 0;
+
+  &:hover { background: $color-red-bg; color: $color-red; }
+}

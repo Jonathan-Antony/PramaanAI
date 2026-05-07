@@ -1,0 +1,53 @@
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  gap: 12px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search {
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 6px 10px;
+  font-size: 12px;
+  width: 180px;
+  outline: none;
+
+  &:focus { border-color: $color-blue; }
+}
+
+.select {
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 6px 8px;
+  font-size: 12px;
+  background: $color-surface;
+  outline: none;
+  cursor: pointer;
+
+  &:focus { border-color: $color-blue; }
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: $color-text-secondary;
+  cursor: pointer;
+
+  input { cursor: pointer; }
+}
