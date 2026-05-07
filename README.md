@@ -14,6 +14,24 @@ The platform streamlines the tender evaluation workflow by combining document in
 
 ---
 
+## 🖥️ Platform Preview
+
+![PramaanAI Intake Page](./intakePage_screenshot.png)
+
+The intake workflow allows procurement officers to initialize a new evaluation case, upload tender documents, and trigger automated AI-assisted tender parsing and eligibility extraction.
+
+### Workflow Overview
+
+1. Click **Create New Case** to initialize a procurement evaluation workflow.
+2. Upload the tender package through the tender upload section.
+3. PramaanAI automatically parses the uploaded tender document.
+4. Eligibility criteria and submission validation details are extracted and displayed in real time.
+5. Bidder submission bundles can then be uploaded for compliance analysis and evaluation readiness checks.
+
+The interface is designed to provide a structured, transparent, and auditable evaluation pipeline for procurement review teams.
+
+---
+
 ## 🏗️ System Architecture
 
 [📄 View Architecture Document](./pramaanAI_architecture.pdf)
@@ -39,6 +57,7 @@ Comprehensive presentation covering the problem statement, proposed solution, wo
 - Human-in-the-loop review workflow
 - Transparent and auditable reporting
 - Structured procurement evaluation pipeline
+- Real-time submission validation and compliance tracking
 
 ---
 
