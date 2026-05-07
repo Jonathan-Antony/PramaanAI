@@ -26,7 +26,6 @@ The intake workflow allows procurement officers to initialize a new evaluation c
 2. Upload the tender package through the tender upload section.
 3. PramaanAI automatically parses the uploaded tender document.
 4. Eligibility criteria and submission validation details are extracted and displayed in real time.
-5. Bidder submission bundles can then be uploaded for compliance analysis and evaluation readiness checks.
 
 The interface is designed to provide a structured, transparent, and auditable evaluation pipeline for procurement review teams.
 
