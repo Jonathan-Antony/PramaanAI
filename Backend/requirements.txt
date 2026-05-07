@@ -2,3 +2,5 @@ fastapi
 uvicorn
 PyMuPDF
 python-multipart
+groq
+python-dotenv
